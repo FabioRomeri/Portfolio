@@ -1,0 +1,209 @@
+@media(max-width: 900px) {
+    .fixed {
+        display: grid;
+        width: 40%;
+        min-width: 360px;
+        overflow-y: auto;
+        padding: 20px;
+        padding-top: 70px;
+    }
+    .scrollable {
+        overflow-y: auto; /* Permette lo scroll se necessario */
+    }
+
+    .content_container {
+        margin-right: auto;
+        margin-left: auto;
+        padding: 35px;
+    }
+}
+
+@media(min-width: 900px) {
+    .container {
+        display: flex;
+        gap: 10px;
+        height: 100vh; /* Altezza piena della viewport */
+    }
+    
+    .fixed {
+        display: flex;
+        width: 40%;
+        position: fixed;
+        top: 0; /* Resta bloccato in alto mentre si scorre */
+        height: 100vh;
+        overflow: hidden; /* Assicurati che il contenuto non trabocchi */
+        padding: 20px;
+        padding-top: 70px;
+    }
+
+    .scrollable {
+        flex: 1;
+        width: 100%;
+        overflow-y: auto; /* Permette lo scroll se necessario */
+        padding-left: 10%;
+        padding-top: 120px;
+        margin-left: 40%;
+        margin-right: 10%;
+        min-width: 400px;
+        -ms-overflow-style: none;  /* Nasconde la scrollbar in Internet Explorer */
+        scrollbar-width: none;  
+        
+    }
+
+    .scrollable::-webkit-scrollbar {
+        display: none; /* Nasconde la scrollbar su Chrome, Safari e altri WebKit */
+      }
+    
+    .content_container {
+        max-width: 600px;
+        margin-right: 10%;
+    }
+}
+
+:root {
+    font-family: Inter, sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+    --important_color: white;
+    --base_color: rgba(255, 255, 255, 0.425);
+    --accent_color: rgb(0, 255, 191);
+  }
+
+body {
+    margin: 0;
+    font-family: Inter, sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1;
+    background: radial-gradient(circle at 70% 30%, #1abc9c80, #297fb965, #8e44ad);
+    background-color: black;
+    color: #ffffff;
+}
+
+.hero {
+    margin-left: auto;
+    padding: 20px;
+    font-size: 25px;
+}
+
+/* List animation */
+ul {
+    list-style-type: none;
+    padding: 0;
+    color: var(--base_color);
+    text-decoration: none;
+    width: 100px;
+}
+
+ul a {
+    color: var(--base_color);
+    text-decoration: none;
+}
+
+ul li {
+    position: relative;
+    margin: 10px 0;
+    padding-bottom: 5px; /* Spazio per la linea */
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.text-container {
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s ease;
+    margin-left: 50px;
+}
+
+/* Linea sottostante */
+ul li::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 40%;
+    height: 2px;
+    background-color: var(--base_color); /* Colore della linea */
+    transition: background-color 0.3s ease; /* Transizione per il colore della linea */
+    transition: width 0.3s ease;
+}
+
+ul li:hover .text-container {
+    color: var(--important_color);
+    transform: translateX(50px); /* Sposta solo il testo verso destra di 10px */
+}
+
+ul li:hover::after {
+    background-color: var(--important_color); /* Cambia il colore della linea in rosso per evidenziare */
+    width: 90%;
+}
+
+ul li:hover {
+    color: var(--important_color); /* Colore del testo evidenziato */
+}
+
+.about {
+    margin-bottom: 50px;
+}
+
+.experience {
+    display: grid;
+    grid-template-columns: 20% 80%; /* Due colonne di uguale larghezza */
+    gap: 10px; /* Spazio tra i div */
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.experience:hover {
+    transition: background-color 0.3s ease;
+    background-color: rgba(128, 128, 128, 0.308);
+}
+
+.exp_content h2 {
+    transition: color 0.3s ease;
+}
+
+.experience:hover .exp_content h2{
+    transition: color 0.3s ease; 
+    color: var(--accent_color);
+}
+
+.exp_date {
+    padding-top: 13px;
+    min-width: 80px;
+    font-size: 13px;
+}
+
+.exp_content {
+    font-size: 10px;
+}
+
+.exp_subjects {
+    display: flex;
+}
+
+.exp_subjects p {
+    font-size: 10px;
+    padding: 10px;
+    border: solid 1px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: rgba(0, 255, 191, 0.11);
+    border-radius: 10px;
+    border-color: var(--accent_color);
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: all 1s;
+}
+
