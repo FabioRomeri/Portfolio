@@ -1,3 +1,40 @@
+const sectionToNavMap = {
+    'aboutSection': 'aboutNav',
+    'experiencesSection': 'experiencesNav',
+    'projectsSection': 'projectsNav',
+};
+
+// Configurazione dell'IntersectionObserver
+const navObserverOptions = {
+    root: null,  // viewport
+    threshold: 0.5  // La sezione è considerata visibile quando almeno il 50% è visibile
+};
+
+// Funzione per gestire l'intersezione
+const navObserverCallback = (entries, observer) => {
+    entries.forEach(entry => {
+        const navId = sectionToNavMap[entry.target.id];
+        const menuItem = document.getElementById(navId);
+        console.log("originale: ", menuItem);
+        if (entry.isIntersecting) {
+            menuItem.classList.add('toggled');
+            console.log("aggiornato: ", menuItem);
+        } else {
+            menuItem.classList.remove('toggled');
+        }
+    });
+};
+
+// Creiamo l'IntersectionObserver
+const navObserver = new IntersectionObserver(navObserverCallback, navObserverOptions);
+
+// Osserviamo ogni sezione
+document.querySelectorAll('section').forEach(section => {
+    navObserver.observe(section);
+});
+
+
+
 const observer = new IntersectionObserver((entries)=>{
     entries.forEach(entry=> {
         if(entry.isIntersecting) {

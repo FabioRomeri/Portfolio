@@ -14,7 +14,7 @@
     .content_container {
         margin-right: auto;
         margin-left: auto;
-        padding: 35px;
+        padding: 30px;
     }
 }
 
@@ -121,8 +121,7 @@ ul li::after {
     width: 40%;
     height: 2px;
     background-color: var(--base_color); /* Colore della linea */
-    transition: background-color 0.3s ease; /* Transizione per il colore della linea */
-    transition: width 0.3s ease;
+    transition: width 0.3s ease, background-color 0.3s ease; /* Transizione per il colore della linea */
 }
 
 ul li:hover .text-container {
@@ -136,6 +135,21 @@ ul li:hover::after {
 }
 
 ul li:hover {
+    color: var(--important_color); /* Colore del testo evidenziato */
+}
+
+/*toggled modifiers*/
+ul li.toggled .text-container {
+    color: var(--important_color);
+    transform: translateX(50px); /* Sposta solo il testo verso destra di 10px */
+}
+
+ul li.toggled::after {
+    background-color: var(--important_color); /* Cambia il colore della linea in rosso per evidenziare */
+    width: 90%;
+}
+
+ul li.toggled {
     color: var(--important_color); /* Colore del testo evidenziato */
 }
 
@@ -170,7 +184,7 @@ ul li:hover {
 
 .exp_date {
     padding-top: 13px;
-    min-width: 70px;
+    min-width: 80px;
     font-size: 13px;
 }
 
