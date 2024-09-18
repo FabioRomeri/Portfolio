@@ -222,7 +222,7 @@ ul li.toggled {
     font-size: 10px;
 }
 
-.exp_subjects {
+.exp_subjects, .exp_programs {
     display: flex;
 }
 
@@ -235,6 +235,17 @@ ul li.toggled {
     background-color: rgba(0, 255, 191, 0.11);
     border-radius: 10px;
     border-color: var(--accent_color);
+}
+
+.exp_programs p {
+    font-size: 10px;
+    padding: 10px;
+    border: solid 1px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: rgba(218, 73, 247, 0.226);
+    border-radius: 10px;
+    border-color: rgb(241, 73, 241);
 }
 
 .project:hover {
@@ -267,10 +278,12 @@ ul li.toggled {
 
 
 .prj_image_container {
-    width: 80px; /* Imposta una larghezza fissa */
+    width: 80%; /* Imposta una larghezza fissa */
+    max-width: 80px;
     aspect-ratio: 1 / 1; /* Mantieni un rapporto di aspetto 1:1 */
     overflow: hidden; /* Nascondi parte dell'immagine che esce dai bordi */
     position: relative; /* Necessario per posizionare l'immagine */
+    border-radius: 10px;
 }
 .prj_image_container img {
     width: 100%;
@@ -279,6 +292,7 @@ ul li.toggled {
     position: absolute; /* Per coprire tutto il contenitore */
     top: 17px;
     left: 0;
+    border-radius: 10px;
 }
 
 
