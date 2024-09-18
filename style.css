@@ -20,6 +20,11 @@
         margin-left: auto;
         padding: 30px;
     }
+
+    .hiddenTitle {
+        display: block;
+    }
+
 }
 
 @media(min-width: 900px) {
@@ -65,6 +70,10 @@
     .content_container {
         max-width: 600px;
         margin-right: 10%;
+    }
+
+    .hiddenTitle {
+        display: none;
     }
 }
 
