@@ -11,6 +11,10 @@
         overflow-y: auto; /* Permette lo scroll se necessario */
     }
 
+    .large_media {
+        display: none;
+    }
+
     .content_container {
         margin-right: auto;
         margin-left: auto;
@@ -19,6 +23,10 @@
 }
 
 @media(min-width: 900px) {
+    .small_media {
+        display: none;
+    }
+
     .container {
         display: flex;
         gap: 10px;
@@ -157,7 +165,7 @@ ul li.toggled {
     margin-bottom: 50px;
 }
 
-.experience {
+.experience, .project{
     display: grid;
     grid-template-columns: 20% 80%; /* Due colonne di uguale larghezza */
     gap: 10px; /* Spazio tra i div */
@@ -188,7 +196,7 @@ ul li.toggled {
     font-size: 13px;
 }
 
-.exp_content {
+.exp_content, .prj_content{
     font-size: 10px;
 }
 
@@ -206,6 +214,34 @@ ul li.toggled {
     border-radius: 10px;
     border-color: var(--accent_color);
 }
+
+.prj_hidden_paragraph {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.project:hover {
+    transition: background-color 0.3s ease;
+    background-color: rgba(128, 128, 128, 0.308);
+}
+
+.prj_content h2 {
+    transition: color 0.3s ease; 
+}
+
+.project:hover .prj_content h2 {
+    transition: color 0.3s ease; 
+    color: var(--accent_color);
+}
+
+.project:hover .prj_hidden_paragraph {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+
 
 .hidden {
     opacity: 0;

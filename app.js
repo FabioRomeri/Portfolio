@@ -49,9 +49,16 @@ const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
 
 
-function scrollToSection(sectionId) {
-    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
-}
+function scrollToSection(sectionId, offset) {
+    const section = document.getElementById(sectionId);
+    const sectionPosition = section.getBoundingClientRect().top + window.pageYOffset; // Posizione della sezione rispetto al top della pagina
+    const scrollPosition = sectionPosition + offset; // Aggiungi l'offset
+
+    window.scrollTo({
+      top: scrollPosition,
+      behavior: 'smooth' // Scroll animato
+    });
+  }
 
 function scrollToDivSection(sectionId, offset) {
     const container = document.getElementById('scrollableDiv');
