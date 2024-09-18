@@ -187,6 +187,15 @@ ul li.toggled {
     margin-bottom: 50px;
 }
 
+.highlight {
+    color: rgba(255, 255, 255, 1);
+    font-weight: bold;
+}
+
+.about p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
 .experience, .project{
     display: grid;
     grid-template-columns: 20% 80%; /* Due colonne di uguale larghezza */
@@ -218,15 +227,20 @@ ul li.toggled {
     font-size: 13px;
 }
 
+.exp_paragraph {
+    color: rgb(255,255,255,0.7);
+}
+
 .exp_content, .prj_content{
     font-size: 10px;
 }
 
-.exp_subjects, .exp_programs {
+.exp_green, .exp_purple {
     display: flex;
+    flex-wrap: wrap;
 }
 
-.exp_subjects p {
+.exp_green p {
     font-size: 10px;
     padding: 10px;
     border: solid 1px;
@@ -237,7 +251,7 @@ ul li.toggled {
     border-color: var(--accent_color);
 }
 
-.exp_programs p {
+.exp_purple p {
     font-size: 10px;
     padding: 10px;
     border: solid 1px;
@@ -278,8 +292,9 @@ ul li.toggled {
 
 
 .prj_image_container {
-    width: 80%; /* Imposta una larghezza fissa */
+    width: 90%; /* Imposta una larghezza fissa */
     max-width: 80px;
+    min-width: 65px;
     aspect-ratio: 1 / 1; /* Mantieni un rapporto di aspetto 1:1 */
     overflow: hidden; /* Nascondi parte dell'immagine che esce dai bordi */
     position: relative; /* Necessario per posizionare l'immagine */
@@ -295,6 +310,9 @@ ul li.toggled {
     border-radius: 10px;
 }
 
+.prj_description {
+    color: rgb(255,255,255,0.7);
+}
 
 footer {
     margin-top: 20px;
