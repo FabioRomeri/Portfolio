@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://rsms.me/">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
     <script defer src="app.js"></script>
  </head>
  <body>
@@ -15,18 +16,37 @@
             <div class="hero">
                 <div class="hidden">
                 <h1>Fabio Romeri</h1>
-                <h4>Computer Engineer</h4>
+                <h4>Computer Engineering Student @ UniPv</h4>
+                <p style="font-size: 15px; opacity: 0.5;">Anche l'occhio vuole la sua parte</p>
                 <ul class="large_media">
                     <li id="aboutNav" class="toggled"><a href="#" onclick="scrollToDivSection('aboutSection',-200)"><span class="text-container">About</span></a></li>
-                    <li id="experiencesNav" class=""><a href="#" onclick="scrollToDivSection('experiencesSection',-100)"><span class="text-container">Experience</a></span></li>
-                    <li id="projectsNav" class=""><a href="#" onclick="scrollToDivSection('projectsSection', -130)"><span class="text-container">Projects</span></a></li>
+                    <li id="studyNav" class=""><a href="#" onclick="scrollToDivSection('studySection',-153)"><span class="text-container">Study</a></span></li>
+                    <li id="experiencesNav" class=""><a href="#" onclick="scrollToDivSection('experiencesSection',-153)"><span class="text-container">Experience</a></span></li>
+                    <li id="projectsNav" class=""><a href="#" onclick="scrollToDivSection('projectsSection', -153)"><span class="text-container">Projects</span></a></li>
                 </ul>
                 <ul class="small_media">
                     <li id="aboutNav" class="toggled"><a href="#" onclick="scrollToSection('aboutSection', -200)"><span class="text-container">About</span></a></li>
+                    <li id="studyNav" class=""><a href="#" onclick="scrollToDivSection('studySection',-153)"><span class="text-container">Study</a></span></li>
                     <li id="experiencesNav" class=""><a href="#" onclick="scrollToSection('experiencesSection', -50)"><span class="text-container">Experience</a></span></li>
-                    <li id="projectsNav" class="toggled"><a href="#" onclick="scrollToSection('projectsSection', -50)"><span class="text-container">Projects</span></a></li>
+                    <li id="projectsNav" class=""><a href="#" onclick="scrollToSection('projectsSection', -50)"><span class="text-container">Projects</span></a></li>
                 </ul>
-            </div>
+                <div>
+                    <div class="contact-container">
+                        <div class="contact-item">
+                            <a href="tel:+393933004005"><span class="iconify icon" data-icon="mdi:phone"></span></a>
+                        </div>
+                        <div class="contact-item">
+                            <a href="mailto:romerifabio.work@gmail.com"><span class="iconify icon" data-icon="mdi:email"></span></a>
+                        </div>
+                        <div class="contact-item">
+                            <a href="https://www.instagram.com/romeeffe" target="_blank"><span class="iconify icon" data-icon="mdi:instagram"></span></a>
+                        </div>
+                        <div class="contact-item">
+                            <a href="https://www.facebook.com/romeeffe" target="_blank"><span class="iconify icon" data-icon="mdi:facebook"></span></a>
+                        </div>
+                    </div>
+                </div>
+                </div>
             </div>
         </div>
         <div id="scrollableDiv" class="scrollable">
@@ -38,10 +58,10 @@
                 </div>
             </section>
 
-            <section id="experiencesSection" class="experiences hidden">
-                <h3 class="hidden">Experiences</h3>
+            <section id="studySection" class="experiences hidden">
+                <h3 class="hidden">Study</h3>
                 <div class="experience hidden">
-                    <header class="exp_date">2024 - Today</header>
+                    <header class="exp_date">Today - 2024</header>
                     <div class="exp_content">
                         <h2>Ingegneria Informatica - UniPv</h2>
                         <p class="exp_paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
@@ -55,16 +75,7 @@
                 </div>
 
                 <div class="experience hidden">
-                    <header class="exp_date">Jul 2023 - Sep 2023</header>
-                    <div class="exp_content">
-                        <h2>Sales Assistant - Decathlon italia</h2>
-                        <p class="exp_paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                        <div class="exp_subjects"></div>
-                    </div>
-                </div>
-
-                <div class="experience hidden">
-                    <header class="exp_date">2019 - 2024</header>
+                    <header class="exp_date">2024 - 2019</header>
                     <div class="exp_content">
                         <h2>Informatica - ITT E. Mattei</h2>
                         <p class="exp_paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
@@ -78,15 +89,29 @@
                 </div>
             </section>
 
+            <section id="experiencesSection" class="experiences hidden">
+                <h3 class="hidden">Experiences</h3>
+
+                <div class="experience hidden">
+                    <header class="exp_date">Sep 2023 - Jul 2023</header>
+                    <div class="exp_content">
+                        <h2>Sales Assistant</h2>
+                        <h3 style="opacity: 0.5;">Decathlon Italia</h3>
+                        <p class="exp_paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                        <div class="exp_subjects"></div>
+                    </div>
+                </div>
+            </section>
+
             <section id="projectsSection" class="hidden">
                 <h3 class="hidden">Projects</h3>
                 <div class="project hidden">
-                    <header class="prj_image_container"><img src="" alt="" class="prj_image"></header>
+                    <header class="prj_image_container"><img src="img/hololens.png" alt="" class="prj_image"></header>
                     <div class="prj_content">
                         <h2>HoloPiano</h2>
                         <h3 style="opacity: 0.5;">ITT E. Mattei</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                        <div class="prj_hidden_paragraph">
+                        <div class="prj_description">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud e</p>
                             <p>Lorem ipsum dolor si sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
                         </div>
@@ -94,18 +119,27 @@
                 </div>
 
                 <div class="project hidden">
-                    <header class="prj_image_container"><img src="" alt="" class="prj_image"></header>
+                    <header class="prj_image_container"><img src="img/cardboard.png" alt="" class="prj_image"></header>
                     <div class="prj_content">
                         <h2>Carboard Stress Test</h2>
                         <h3 style="opacity: 0.5;">PoliMi - Ghelfi Ondulati</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                        <div class="prj_hidden_paragraph">
+                        <div class="prj_description">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud e</p>
                             <p>Lorem ipsum dolor si sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
                         </div>
                     </div>
                 </div>
+
             </section>
+
+            <footer>
+                <p>&copy; <span id="current-year"></span> Pagina completamente realizzata a mano by Fabio Romeri - Tutti i diritti riservati</p>
+            </footer>
+            <script>
+                // Aggiornare automaticamente l'anno corrente
+                document.getElementById('current-year').textContent = new Date().getFullYear();
+            </script>
             </div>
         </div>
     </div>

@@ -1,5 +1,6 @@
 const sectionToNavMap = {
     'aboutSection': 'aboutNav',
+    'studySection': 'studyNav',
     'experiencesSection': 'experiencesNav',
     'projectsSection': 'projectsNav',
 };
@@ -15,10 +16,10 @@ const navObserverCallback = (entries, observer) => {
     entries.forEach(entry => {
         const navId = sectionToNavMap[entry.target.id];
         const menuItem = document.getElementById(navId);
-        console.log("originale: ", menuItem);
+        //console.log("originale: ", menuItem);
         if (entry.isIntersecting) {
             menuItem.classList.add('toggled');
-            console.log("aggiornato: ", menuItem);
+            //console.log("aggiornato: ", menuItem);
         } else {
             menuItem.classList.remove('toggled');
         }

@@ -134,12 +134,12 @@ ul li::after {
 
 ul li:hover .text-container {
     color: var(--important_color);
-    transform: translateX(50px); /* Sposta solo il testo verso destra di 10px */
+    transform: translateX(30px); /* Sposta solo il testo verso destra di 10px */
 }
 
 ul li:hover::after {
     background-color: var(--important_color); /* Cambia il colore della linea in rosso per evidenziare */
-    width: 90%;
+    width: 70%;
 }
 
 ul li:hover {
@@ -159,6 +159,28 @@ ul li.toggled::after {
 
 ul li.toggled {
     color: var(--important_color); /* Colore del testo evidenziato */
+}
+
+/*Contacts*/
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 0px;
+}
+
+.contact-item a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact-item .icon {
+    font-size: 24px;
+    margin-bottom: 5px;
 }
 
 .about {
@@ -215,12 +237,6 @@ ul li.toggled {
     border-color: var(--accent_color);
 }
 
-.prj_hidden_paragraph {
-    visibility: hidden;
-    opacity: 0;
-    transition: all 0.3s ease-in-out;
-}
-
 .project:hover {
     transition: background-color 0.3s ease;
     background-color: rgba(128, 128, 128, 0.308);
@@ -234,14 +250,6 @@ ul li.toggled {
     transition: color 0.3s ease; 
     color: var(--accent_color);
 }
-
-.project:hover .prj_hidden_paragraph {
-    visibility: visible;
-    opacity: 1;
-    transition: all 0.3s ease-in-out;
-}
-
-
 
 .hidden {
     opacity: 0;
@@ -257,3 +265,25 @@ ul li.toggled {
     transition: all 1s;
 }
 
+
+.prj_image_container {
+    width: 80px; /* Imposta una larghezza fissa */
+    aspect-ratio: 1 / 1; /* Mantieni un rapporto di aspetto 1:1 */
+    overflow: hidden; /* Nascondi parte dell'immagine che esce dai bordi */
+    position: relative; /* Necessario per posizionare l'immagine */
+}
+.prj_image_container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Riempi il contenitore senza distorcere l'immagine */
+    position: absolute; /* Per coprire tutto il contenitore */
+    top: 17px;
+    left: 0;
+}
+
+
+footer {
+    margin-top: 20px;
+    font-size: 10px;
+    opacity: 0.5;
+}
