@@ -25,6 +25,10 @@
         display: block;
     }
 
+    .experience, .project {
+        padding: 5px;
+    }
+
 }
 
 @media(min-width: 900px) {
@@ -74,6 +78,10 @@
 
     .hiddenTitle {
         display: none;
+    }
+
+    .experience, .project {
+        padding: 15px;
     }
 }
 
@@ -209,7 +217,6 @@ ul li.toggled {
     display: grid;
     grid-template-columns: 20% 80%; /* Due colonne di uguale larghezza */
     gap: 10px; /* Spazio tra i div */
-    padding: 15px;
     border-radius: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -238,6 +245,7 @@ ul li.toggled {
 
 .exp_paragraph {
     color: rgb(255,255,255,0.7);
+    padding: 5px;
 }
 
 .exp_content, .prj_content{
@@ -321,6 +329,7 @@ ul li.toggled {
 
 .prj_description {
     color: rgb(255,255,255,0.7);
+    padding: 5px;
 }
 
 footer {
